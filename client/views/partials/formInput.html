@@ -1,0 +1,14 @@
+<template name="formInput">
+  <div class="{{size}} {{required}} field
+  {{#if afFieldIsInvalid name=name}}error{{/if}}">
+    <label>{{label}}</label>
+    <div class="ui {{#if icon}}icon{{/if}} input">
+      {{> afFieldInput name=name placeholder=placeholder type=type}}
+      {{#if icon}}<i class="{{icon}}"></i>{{/if}}
+    </div>
+      <div class="ui red pointing label transition
+      {{#if afFieldIsInvalid name=name}}visible{{else}}hidden{{/if}}">
+        {{afFieldMessage name=name}}
+      </div>
+  </div>
+</template>

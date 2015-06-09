@@ -1,0 +1,13 @@
+<template name="header">
+  <div class="ui large teal secondary pointing page grid menu">
+    <div class="header item"><a href="{{pathFor 'landing'}}">MediTrakr</a></div>
+    <div class="right menu">
+      {{#if currentUser}}
+        <p class="ui item">{{loggedInUser}}</p>
+        <a href="#" class="ui item" id="signOut">Sign Out</a>
+      {{else}}
+        <a href="{{pathFor 'login'}}" class="ui item">Sign In</a>
+      {{/if}}
+    </div>
+  </div>
+</template>
