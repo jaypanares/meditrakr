@@ -4,7 +4,7 @@ Template.home.helpers({
   },
   pluralized: function(text, amount) {
     return pluralize(text, parseInt(amount, 10));
-  }
+  },
 });
 
 Template.home.events({
@@ -28,6 +28,6 @@ Template.home.events({
     evt.preventDefault();
     DocToUpdate.set(Medicines.findOne({_id: this._id}));
     ModalController.show('#formModal');
-  }
+  },
 
 });
