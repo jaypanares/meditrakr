@@ -1,0 +1,14 @@
+<template name="header">
+  <nav class="uk-bar">
+    <div class="uk-container uk-container-center">
+      <a href="/" class="uk-navbar-brand">MediTrakr</a>
+      <div class="uk-navbar-flip">
+        <ul class="uk-navbar-nav">
+          <li><a href="/about">About</a></li>
+          <li><a href="/login" data-bind="if: !userstatus">Login</a></li>
+          <li><a href="#" data-bind="if: userstatus, click: logOut">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>

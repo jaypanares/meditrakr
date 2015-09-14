@@ -1,0 +1,32 @@
+<template name="login">
+  <div class="uk-block">
+    <div class="uk-width-1-5 uk-container-center">
+      <form class="uk-form">
+        <fieldset>
+          <legend data-bind="if: !isCreateAccount">Log in</legend>
+          <legend data-bind="if: isCreateAccount">Create an account</legend>
+          <div class="uk-form-row">
+            <input type="text" class="uk-width-1-1" placeholder="Username"
+            data-bind="value: username">
+          </div>
+          <div class="uk-form-row">
+            <input type="password" class="uk-width-1-1" placeholder="Password"
+            data-bind="value: password">
+          </div>
+          <div class="uk-form-row" data-bind="if: isCreateAccount">
+            <input type="password" class="uk-width-1-1" placeholder="Confirm Password"
+            data-bind="value: confirmPassword">
+          </div>
+          <div class="uk-form-row">
+            <span data-bind="text: errorMessage"></span>
+          </div>
+          <div class="uk-form-row">
+            <button class="uk-button uk-width-1-1" data-bind="click: handleFormSubmit">Login</button>
+            <small><a href="#" data-bind="click: toggleCreateAccount, if: !isCreateAccount">No Account?</a></small>
+            <small><a href="#" data-bind="click: toggleCreateAccount, if: isCreateAccount">Already signed up?</a></small>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</template>
